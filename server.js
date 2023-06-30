@@ -9,7 +9,7 @@ import categoryRoutes from './routes/categoryRoute.js';
 import productRoutes from "./routes/productRoutes.js";
 import cors from'cors';
 import path from 'path'
-
+import { dirname } from 'path';
 //configure env
 dotenv.config();
 
@@ -18,7 +18,7 @@ connectDb();
 
 //rest object
 const app = express();
-
+const __dirname = dirname(__filename);
 //middelwares
 app.use(cors());
 app.use(express.json());
